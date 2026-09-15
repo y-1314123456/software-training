@@ -23,11 +23,11 @@
 
 | 软件 | 版本 |
 | ---- | ---- |
-| Java | 17 |
-| Maven | 3.8.6 |
+| Java | 21 |
+| Maven | 3.9.6 |
 | Spring Boot | 3.2.0 |
-| Node.js | 20.12.0 |
-| npm | 10.5.0 |
+| Node.js | 24.18.0 |
+| npm | 11.16.0 |
 | Vue | 3.4.21 |
 | Vite | 5.2.0 |
 | Element Plus | 2.6.0 |
