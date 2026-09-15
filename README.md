@@ -1,2 +1,92 @@
-# software-training
-This is an AI‑powered inspection and evaluation system for college students’ software training. It addresses the low‑efficiency problem of manual grading in traditional software practice teaching.
+# Campus-Secondhand-Assistant
+
+> 校园二手集市智能助手
+
+## 项目简介
+
+面向校园闲置物品交易场景，支持教材、数码产品、宿舍好物等闲置流转。解决卖家拍照不会撰写商品文案、买家不了解物品行情、咨询消息无人及时回复的痛点，打造轻量二手交易智能体。
+
+## 核心功能
+
+- **拍照生成商品信息**：上传物品图片，多模态大模型自动生成商品标题、商品描述，结合历史成交数据给出建议定价
+- **同款比价**：检索历史交易知识库，展示同类商品过往成交价格，辅助买卖双方参考定价
+- **智能撮合与自动回复**：智能 Agent 处理买卖双方对话，自动应答咨询，匹配供需双方
+- **交易风险提示**：识别交易隐患，给出反诈、隐私保护、线下交易安全提醒
+
+## 技术栈
+
+- **前端**：Vue 3 + Vite + Element Plus
+- **后端**：Spring Boot + MyBatis + MySQL
+- **AI**：多模态大模型（图片转文案）+ RAG（历史成交价知识库）+ Agent 对话客服
+
+## 开发环境与软件版本
+
+| 软件 | 版本 |
+| ---- | ---- |
+| Java | 21 |
+| Maven | 3.9.6 |
+| Spring Boot | 3.2.0 |
+| Node.js | 24.18.0 |
+| npm | 11.16.0 |
+| Vue | 3.4.21 |
+| Vite | 5.2.0 |
+| Element Plus | 2.6.0 |
+| MySQL | 8.x |
+
+## 项目结构
+
+```
+Campus-Secondhand-Assistant/
+├── frontend/          # Vue3 前端（卖家发布端 + 买家浏览端）
+├── backend/           # Spring Boot 后端（controller/service/mapper/entity/dto/config）
+├── docs/              # 课程设计文档
+│   ├── sql/           # 数据库脚本（init.sql）
+│   ├── api/           # API接口文档
+│   ├── 需求分析.md    # 系统功能分析说明书
+│   ├── 接口设计.md    # 系统接口设计文档
+│   ├── 详细设计.md    # 系统详细设计
+│   ├── 部署文档.md    # 系统安装部署文档
+│   ├── 操作手册.md    # 系统操作说明书
+│   └── 开发规范.md    # 小组开发规范
+└── README.md
+```
+
+## 角色说明
+
+| 角色 | 功能 |
+| ---- | ---- |
+| 卖家 | 上传图片，AI 生成商品文案与参考定价，发布闲置商品 |
+| 买家 | 浏览二手商品，查看同款比价，智能咨询物品信息 |
+| 管理员 | 管理商品信息、风控规则、维护历史交易知识库 |
+
+## 快速开始
+
+### 前端
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### 后端
+
+```bash
+cd backend
+mvn spring-boot:run
+```
+
+## 开发规范
+
+1. 每人负责一个功能模块（前后端都由本人完成）
+2. 在 `feature/功能名` 分支上开发
+3. 完成后发起 Pull Request 合并到 `main`
+
+## 团队分工
+
+| 成员 | 负责功能 | 备注 |
+| --- | --- | --- |
+| 成员 1 | 图片识别、AI 商品文案生成模块（图生标题描述） | 待确认 |
+| 成员 2 | RAG 同款比价、定价模型模块（历史成交价查询，数据口径说明） | 待确认 |
+| 成员 3 | Agent 智能对话、买卖供需撮合模块、自动回复 | 待确认 |
+| 成员 4 | 交易风险检测、隐私反诈风控模块 + 商品/用户管理、前端页面开发 | 待确认 |
