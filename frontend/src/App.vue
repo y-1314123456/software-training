@@ -11,7 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <h1>欢迎来到校园二手集市智能助手！</h1>
+  <h1>大家好</h1>
 </template>
 
 <style scoped>
